@@ -1,0 +1,69 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ARMex, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         start
+    4 00000000 E59F002C        ldr              r0, tempaddr
+    5 00000004 E3A0100A        mov              r1,#10      ;r1 = 10
+    6 00000008 E0812181        add              r2,r1,r1,lsl #3 ;r2 = 10*9
+    7 0000000C E0833182        add              r3,r2,lsl #3 ;r3 = 10*9*8
+    8 00000010 E0634183        rsb              r4,r3,r3,lsl #3 ;r4 = 10*9*8*7
+    9 00000014 E0844084        add              r4,r4,lsl #1 ;r4 =10*9*8*7*2
+   10 00000018 E0855084        add              r5,r4,lsl #1 ;r5 = 10*9*8*7*6
+   11 0000001C E0856105        add              r6,r5,r5,lsl #2 
+                                                            ;r6 = 10*9*8*7*6*5
+   12 00000020 E0877106        add              r7,r6,lsl #2 ;r7 = 10*9*8*7*6*5
+                                                            *4
+   13 00000024 E0878087        add              r8,r7,r7,lsl #1 ;r8 = 10*9*8*7*
+                                                            6*5*4*3
+   14 00000028 E0899088        add              r9,r8,lsl #1 ;r9 = 10*9*8*7*6*5
+                                                            *4*3*2
+   15 0000002C E5809000        str              r9,[r0]
+   16 00000030         
+   17 00000030 E1A0F00E        mov              pc,lr
+   18 00000034         
+   19 00000034 00040000 
+                       tempaddr
+                               &                &40000
+   20 00000038                 end
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\problem1.d -o.\objects\problem1.o -IC:\Users\dlrkd\homework\
+kanghyun\onedrive\2-2\keli\ARM\RV31\INC -IC:\Users\dlrkd\homework\kanghyun\oned
+rive\2-2\keli\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVIS
+ION_VERSION SETA 529" --list=.\listings\problem1.lst problem1.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARMex 00000000
+
+Symbol: ARMex
+   Definitions
+      At line 1 in file problem1.s
+   Uses
+      None
+Comment: ARMex unused
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 3 in file problem1.s
+   Uses
+      None
+Comment: start unused
+tempaddr 00000034
+
+Symbol: tempaddr
+   Definitions
+      At line 19 in file problem1.s
+   Uses
+      At line 4 in file problem1.s
+Comment: tempaddr used once
+3 symbols
+335 symbols in table

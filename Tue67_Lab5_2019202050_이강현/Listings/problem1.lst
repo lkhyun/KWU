@@ -1,0 +1,86 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             problem1,CODE,READONLY
+    2 00000000                 ENTRY
+    3 00000000         start
+    4 00000000 E59FD024        LDR              sp,tempaddr ;stack pointer
+    5 00000004 E3A01001        MOV              r1, #1      ;mul
+    6 00000008 E3A02001        MOV              r2, #1      ;result
+    7 0000000C EAFFFFFF        B                factorial   ;move factorial fun
+                                                            ction
+    8 00000010         
+    9 00000010         factorial
+   10 00000010 E2811001        ADD              r1,r1,#1
+   11 00000014 E0020291        MUL              r2,r1,r2
+   12 00000018 E351000A        CMP              r1,#10
+   13 0000001C 0A000000        BEQ              Endline     ;if r2 == 10!
+   14 00000020 1AFFFFFA        BNE              factorial   ;else loop
+   15 00000024         
+   16 00000024         Endline
+   17 00000024 E88D0004        STMIA            sp, {r2}    ;multiple store to 
+                                                            sp
+   18 00000028 E3A0F000        MOV              pc,#0
+   19 0000002C         
+   20 0000002C 00040000 
+                       tempaddr
+                               DCD              &00040000
+   21 00000030         
+   22 00000030                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\problem1.d -o.\objects\problem1.o -IC:\Users\dlrkd\homework\
+kanghyun\onedrive\2-2\keli\ARM\RV31\INC -IC:\Users\dlrkd\homework\kanghyun\oned
+rive\2-2\keli\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVIS
+ION_VERSION SETA 529" --list=.\listings\problem1.lst problem1.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Endline 00000024
+
+Symbol: Endline
+   Definitions
+      At line 16 in file problem1.s
+   Uses
+      At line 13 in file problem1.s
+Comment: Endline used once
+factorial 00000010
+
+Symbol: factorial
+   Definitions
+      At line 9 in file problem1.s
+   Uses
+      At line 7 in file problem1.s
+      At line 14 in file problem1.s
+
+problem1 00000000
+
+Symbol: problem1
+   Definitions
+      At line 1 in file problem1.s
+   Uses
+      None
+Comment: problem1 unused
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 3 in file problem1.s
+   Uses
+      None
+Comment: start unused
+tempaddr 0000002C
+
+Symbol: tempaddr
+   Definitions
+      At line 20 in file problem1.s
+   Uses
+      At line 4 in file problem1.s
+Comment: tempaddr used once
+5 symbols
+337 symbols in table
