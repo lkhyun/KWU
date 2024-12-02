@@ -1,0 +1,101 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ARMex, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         
+    4 00000000         start
+    5 00000000 E59F0044        LDR              r0, addr
+    6 00000004 E59F1044        LDR              r1, =array
+    7 00000008 E4912024        LDR              r2,[r1],#36 ; access last numbe
+                                                            r
+    8 0000000C         
+    9 0000000C         Loop
+   10 0000000C E4112004        LDR              r2,[r1],#-4 ;access backward or
+                                                            der
+   11 00000010 E4C02001        STRB             r2,[r0],#1  ;access memory 1byt
+                                                            e 
+   12 00000014 E352000A        CMP              r2,#10
+   13 00000018 0A000000        BEQ              endloop
+   14 0000001C EAFFFFFA        B                Loop
+   15 00000020         endloop
+   16 00000020 E1A0F00E        MOV              pc,lr
+   17 00000024         
+   18 00000024 0000000A 
+              00000009 
+              00000008 
+              00000007 
+              00000006 
+              00000005 
+              00000004 
+              00000003 
+              00000002 
+              00000001 array   DCD              10,9,8,7,6,5,4,3,2,1
+   19 0000004C 00004000 
+                       addr    &                &4000
+   20 00000050                 END
+              00000000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\problem2.d -o.\objects\problem2.o -IC:\Users\dlrkd\homework\
+kanghyun\onedrive\2-2\keli\ARM\RV31\INC -IC:\Users\dlrkd\homework\kanghyun\oned
+rive\2-2\keli\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVIS
+ION_VERSION SETA 529" --list=.\listings\problem2.lst problem2.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARMex 00000000
+
+Symbol: ARMex
+   Definitions
+      At line 1 in file problem2.s
+   Uses
+      None
+Comment: ARMex unused
+Loop 0000000C
+
+Symbol: Loop
+   Definitions
+      At line 9 in file problem2.s
+   Uses
+      At line 14 in file problem2.s
+Comment: Loop used once
+addr 0000004C
+
+Symbol: addr
+   Definitions
+      At line 19 in file problem2.s
+   Uses
+      At line 5 in file problem2.s
+Comment: addr used once
+array 00000024
+
+Symbol: array
+   Definitions
+      At line 18 in file problem2.s
+   Uses
+      At line 6 in file problem2.s
+Comment: array used once
+endloop 00000020
+
+Symbol: endloop
+   Definitions
+      At line 15 in file problem2.s
+   Uses
+      At line 13 in file problem2.s
+Comment: endloop used once
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 4 in file problem2.s
+   Uses
+      None
+Comment: start unused
+6 symbols
+340 symbols in table
