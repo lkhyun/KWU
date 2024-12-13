@@ -8,4 +8,5 @@ data_architecture_design1
 
 ![image](https://github.com/user-attachments/assets/2016cbe6-9142-42c8-9e49-d92eb1e66859)
 
-자세한 내용은 보고서 참조
+자세한 내용은 보고서 참고
+---------------------------
