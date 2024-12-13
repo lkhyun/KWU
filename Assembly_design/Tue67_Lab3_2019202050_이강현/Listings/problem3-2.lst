@@ -1,0 +1,61 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ARMex, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         start
+    4 00000000 E59F0020        LDR              r0,addr
+    5 00000004 E3A01001        MOV              r1,#1       ;r1 = 1
+    6 00000008 E1A02081        MOV              r2,r1,LSL #1 ;r2 = 2
+    7 0000000C E1A02082        MOV              r2,r2,LSL #1 ;r2 = 4
+    8 00000010 E2822001        ADD              r2,r2,#1    ;r2 = 5
+    9 00000014 E1A02082        MOV              r2,r2,LSL #1 ;r2 = 10
+   10 00000018 E0823002        ADD              r3,r2,r2    ;r3 = 20
+   11 0000001C E0040293        MUL              r4,r3,r2    ; r4 = r3*r2
+   12 00000020 E5804000        STR              r4,[r0]
+   13 00000024 E1A0F00E        MOV              pc,lr
+   14 00000028         
+   15 00000028 00004000 
+                       addr    &                &4000
+   16 0000002C         
+   17 0000002C                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\problem3-2.d -o.\objects\problem3-2.o -IC:\Users\dlrkd\homew
+ork\kanghyun\onedrive\2-2\keli\ARM\RV31\INC -IC:\Users\dlrkd\homework\kanghyun\
+onedrive\2-2\keli\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__
+UVISION_VERSION SETA 529" --list=.\listings\problem3-2.lst problem3-2.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARMex 00000000
+
+Symbol: ARMex
+   Definitions
+      At line 1 in file problem3-2.s
+   Uses
+      None
+Comment: ARMex unused
+addr 00000028
+
+Symbol: addr
+   Definitions
+      At line 15 in file problem3-2.s
+   Uses
+      At line 4 in file problem3-2.s
+Comment: addr used once
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 3 in file problem3-2.s
+   Uses
+      None
+Comment: start unused
+3 symbols
+335 symbols in table

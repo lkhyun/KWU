@@ -1,0 +1,754 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             project, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         
+    4 00000000         Main
+    5 00000000 E59F0798        ldr              r0, =Sampled_Data
+    6 00000004         
+    7 00000004         
+    8 00000004         
+    9 00000004         Result
+   10 00000004         
+   11 00000004         Done
+   12 00000004 E3A0F000        mov              pc, #0      ; finish
+   13 00000008         
+   14 00000008 F0000000 
+                       Save_Result_Address
+                               DCD              &F0000000
+   15 0000000C         
+   16 0000000C         
+   17 0000000C         Sampled_Data
+   18 0000000C BF9CC118 
+              BF8AC939 
+              3FB8C0B2 
+              40845A50         DCD              0xBF9CC118, 0xBF8AC939, 0x3FB8C
+0B2, 0x40845A50
+   19 0000001C 40B347F7 
+              40C2078B 
+              40C42051 
+              40C21F27         DCD              0x40B347F7, 0x40C2078B, 0x40C42
+051, 0x40C21F27
+   20 0000002C 40BC191D 
+              40B2375B 
+              40A4B628 
+              4093E385         DCD              0x40BC191D, 0x40B2375B, 0x40A4B
+628, 0x4093E385
+   21 0000003C 40801D75 
+              40539FD6 
+              4022E4FA 
+              3FDE1761         DCD              0x40801D75, 0x40539FD6, 0x4022E
+4FA, 0x3FDE1761
+   22 0000004C 3F64885B 
+              3D0F5BCA 
+              BF522E5A 
+              BFD44D20         DCD              0x3F64885B, 0x3D0F5BCA, 0xBF522
+E5A, 0xBFD44D20
+   23 0000005C C01D8AE4 
+              C04DBF14 
+              C079DDA7 
+              C0908CCF         DCD              0xC01D8AE4, 0xC04DBF14, 0xC079D
+DA7, 0xC0908CCF
+   24 0000006C C0A1612C 
+              C0AF236C 
+              C0B99C28 
+              C0C0A600         DCD              0xC0A1612C, 0xC0AF236C, 0xC0B99
+C28, 0xC0C0A600
+   25 0000007C C0C42E1D 
+              C0C43457 
+              C0C0CAF4 
+              C0BA1607         DCD              0xC0C42E1D, 0xC0C43457, 0xC0C0C
+AF4, 0xC0BA1607
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   26 0000008C C0B04A70 
+              C0A3AC88 
+              C0948E7D 
+              C0834E6F         DCD              0xC0B04A70, 0xC0A3AC88, 0xC0948
+E7D, 0xC0834E6F
+   27 0000009C C060A898 
+              C0381F0E 
+              C00DE952 
+              BFC5EB57         DCD              0xC060A898, 0xC0381F0E, 0xC00DE
+952, 0xBFC5EB57
+   28 000000AC BF60CA2E 
+              BE6899BF 
+              3EC9284E 
+              3F781D7A         DCD              0xBF60CA2E, 0xBE6899BF, 0x3EC92
+84E, 0x3F781D7A
+   29 000000BC 3FBEBB28 
+              3FF8FB92 
+              4014D73A 
+              4027F4E1         DCD              0x3FBEBB28, 0x3FF8FB92, 0x4014D
+73A, 0x4027F4E1
+   30 000000CC 40357F74 
+              403D3EBF 
+              403F1A55 
+              403B1991         DCD              0x40357F74, 0x403D3EBF, 0x403F1
+A55, 0x403B1991
+   31 000000DC 403162F3 
+              40223AD6 
+              400E0193 
+              3FEA6227         DCD              0x403162F3, 0x40223AD6, 0x400E0
+193, 0x3FEA6227
+   32 000000EC 3FB0B3D6 
+              3F608012 
+              3EA9B7D8 
+              BE7A1D0A         DCD              0x3FB0B3D6, 0x3F608012, 0x3EA9B
+7D8, 0xBE7A1D0A
+   33 000000FC BF568D33 
+              BFB805BE 
+              C001F68E 
+              C026B90F         DCD              0xBF568D33, 0xBFB805BE, 0xC001F
+68E, 0xC026B90F
+   34 0000010C C0498DA7 
+              C069C3D2 
+              C0835D46 
+              C08FF1A3         DCD              0xC0498DA7, 0xC069C3D2, 0xC0835
+D46, 0xC08FF1A3
+   35 0000011C C09A622F 
+              C0A27D94 
+              C0A81EBB 
+              C0AB2D45         DCD              0xC09A622F, 0xC0A27D94, 0xC0A81
+EBB, 0xC0AB2D45
+   36 0000012C C0AB9DCE 
+              C0A971DE 
+              C0A4B7A6 
+              C09D8970         DCD              0xC0AB9DCE, 0xC0A971DE, 0xC0A4B
+7A6, 0xC09D8970
+   37 0000013C C0940CE8 
+              C088721C 
+              C075E4C2 
+              C0579E0B         DCD              0xC0940CE8, 0xC088721C, 0xC075E
+
+
+
+ARM Macro Assembler    Page 3 
+
+
+4C2, 0xC0579E0B
+   38 0000014C C0369FD3 
+              C0138400 
+              BFDDD70F 
+              BF92F689         DCD              0xC0369FD3, 0xC0138400, 0xBFDDD
+70F, 0xBF92F689
+   39 0000015C BF0F636B 
+              3CAC2AB4 
+              3F15E85F 
+              3F8FEC34         DCD              0xBF0F636B, 0x3CAC2AB4, 0x3F15E
+85F, 0x3F8FEC34
+   40 0000016C 3FD080CE 
+              4005D99A 
+              402050C1 
+              403744EF         DCD              0x3FD080CE, 0x4005D99A, 0x40205
+0C1, 0x403744EF
+   41 0000017C 404A666F 
+              4059779A 
+              40644D5B 
+              406ACF4A         DCD              0x404A666F, 0x4059779A, 0x40644
+D5B, 0x406ACF4A
+   42 0000018C 406CF77F 
+              406AD204 
+              40647C09 
+              405A22CE         DCD              0x406CF77F, 0x406AD204, 0x40647
+C09, 0x405A22CE
+   43 0000019C 404C024E 
+              403A63C6 
+              40259C01 
+              400E099B         DCD              0x404C024E, 0x403A63C6, 0x40259
+C01, 0x400E099B
+   44 000001AC 3FE82639 
+              3FB04A3D 
+              3F6AC178 
+              3EE13F17         DCD              0x3FE82639, 0x3FB04A3D, 0x3F6AC
+178, 0x3EE13F17
+   45 000001BC BD4033D1 
+              BF095DBD 
+              BF82D912 
+              BFBFA9E9         DCD              0xBD4033D1, 0xBF095DBD, 0xBF82D
+912, 0xBFBFA9E9
+   46 000001CC BFFA5654 
+              C019106D 
+              C0332DCC 
+              C04B34FD         DCD              0xBFFA5654, 0xC019106D, 0xC0332
+DCC, 0xC04B34FD
+   47 000001DC C060E103 
+              C073F6B9 
+              C0822297 
+              C088D2F0         DCD              0xC060E103, 0xC073F6B9, 0xC0822
+297, 0xC088D2F0
+   48 000001EC C08DFE66 
+              C0919C38 
+              C093A8D0 
+              C09425A6         DCD              0xC08DFE66, 0xC0919C38, 0xC093A
+8D0, 0xC09425A6
+   49 000001FC C0931919 
+              C0908E35 
+              C08C9483 
+
+
+
+ARM Macro Assembler    Page 4 
+
+
+              C0873FBC         DCD              0xC0931919, 0xC0908E35, 0xC08C9
+483, 0xC0873FBC
+   50 0000020C C080A787 
+              C071CE51 
+              C0603A5E 
+              C04CD636         DCD              0xC080A787, 0xC071CE51, 0xC0603
+A5E, 0xC04CD636
+   51 0000021C C037EA01 
+              C021C24D 
+              C00AAF3E 
+              BFE60774         DCD              0xC037EA01, 0xC021C24D, 0xC00AA
+F3E, 0xBFE60774
+   52 0000022C BFB62903 
+              BF866E99 
+              BF2F073F 
+              BEA84614         DCD              0xBFB62903, 0xBF866E99, 0xBF2F0
+73F, 0xBEA84614
+   53 0000023C 3C21281A 
+              3EA7625A 
+              3F1E3484 
+              3F60F54C         DCD              0x3C21281A, 0x3EA7625A, 0x3F1E3
+484, 0x3F60F54C
+   54 0000024C 3F8D7994 
+              3FA5A570 
+              3FB89D2E 
+              3FC61237         DCD              0x3F8D7994, 0x3FA5A570, 0x3FB89
+D2E, 0x3FC61237
+   55 0000025C 3FCDCA22 
+              3FCFA03D 
+              3FCB86DA 
+              3FC1884A         DCD              0x3FCDCA22, 0x3FCFA03D, 0x3FCB8
+6DA, 0x3FC1884A
+   56 0000026C 3FB1C795 
+              3F9C80C8 
+              3F8208E1 
+              3F459AA3         DCD              0x3FB1C795, 0x3F9C80C8, 0x3F820
+8E1, 0x3F459AA3
+   57 0000027C 3EFD4C33 
+              3E41A8F8 
+              BE0EE982 
+              BEF88AC5         DCD              0x3EFD4C33, 0x3E41A8F8, 0xBE0EE
+982, 0xBEF88AC5
+   58 0000028C BF6D0391 
+              BEAA8458 
+              3FA48489 
+              402FFC1A         DCD              0xBF6D0391, 0xBEAA8458, 0x3FA48
+489, 0x402FFC1A
+   59 0000029C 40618C5D 
+              407425BC 
+              407B65E9 
+              407EB188         DCD              0x40618C5D, 0x407425BC, 0x407B6
+5E9, 0x407EB188
+   60 000002AC 407E18C1 
+              4079C266 
+              4071EAAB 
+              4066E155         DCD              0x407E18C1, 0x4079C266, 0x4071E
+AAB, 0x4066E155
+   61 000002BC 40590760 
+              4048CC3D 
+
+
+
+ARM Macro Assembler    Page 5 
+
+
+              4036AAA9 
+              40232545         DCD              0x40590760, 0x4048CC3D, 0x4036A
+AA9, 0x40232545
+   62 000002CC 400EC300 
+              3FF416C8 
+              3FCB05E7 
+              3FA34F36         DCD              0x400EC300, 0x3FF416C8, 0x3FCB0
+5E7, 0x3FA34F36
+   63 000002DC 3F7BB58B 
+              3F36EDA7 
+              3EF34A41 
+              3E89E72E         DCD              0x3F7BB58B, 0x3F36EDA7, 0x3EF34
+A41, 0x3E89E72E
+   64 000002EC 3DCD1ADD 
+              BCFA5C08 
+              BDFA4FD5 
+              BE33BFB2         DCD              0x3DCD1ADD, 0xBCFA5C08, 0xBDFA4
+FD5, 0xBE33BFB2
+   65 000002FC BE450BC5 
+              BE343193 
+              BE0565E7 
+              BD772083         DCD              0xBE450BC5, 0xBE343193, 0xBE056
+5E7, 0xBD772083
+   66 0000030C 3CE64A68 
+              3E03E1B0 
+              3E70BAF3 
+              3EAE3677         DCD              0x3CE64A68, 0x3E03E1B0, 0x3E70B
+AF3, 0x3EAE3677
+   67 0000031C 3EE012CE 
+              3F055827 
+              3F15871C 
+              3F1F42F2         DCD              0x3EE012CE, 0x3F055827, 0x3F158
+71C, 0x3F1F42F2
+   68 0000032C 3F217072 
+              3F1B35E4 
+              3F0C029D 
+              3EE728B8         DCD              0x3F217072, 0x3F1B35E4, 0x3F0C0
+29D, 0x3EE728B8
+   69 0000033C 3EA3F4E7 
+              3E1E5A20 
+              BD2E5115 
+              BE88F2A7         DCD              0x3EA3F4E7, 0x3E1E5A20, 0xBD2E5
+115, 0xBE88F2A7
+   70 0000034C BF03E0C9 
+              BF4797E3 
+              BF86F398 
+              BFAA7790         DCD              0xBF03E0C9, 0xBF4797E3, 0xBF86F
+398, 0xBFAA7790
+   71 0000035C BFCD5A8B 
+              BFEE98A8 
+              C006975A 
+              C01410B8         DCD              0xBFCD5A8B, 0xBFEE98A8, 0xC0069
+75A, 0xC01410B8
+   72 0000036C C01F4259 
+              C027C11A 
+              C02D2FEB 
+              C02F4295         DCD              0xC01F4259, 0xC027C11A, 0xC02D2
+FEB, 0xC02F4295
+   73 0000037C C02DC010 
+
+
+
+ARM Macro Assembler    Page 6 
+
+
+              C028845D 
+              C01F81CE 
+              C012C1BA         DCD              0xC02DC010, 0xC028845D, 0xC01F8
+1CE, 0xC012C1BA
+   74 0000038C C0026492 
+              BFDD42B4 
+              BFAF8912 
+              BF78B941         DCD              0xC0026492, 0xBFDD42B4, 0xBFAF8
+912, 0xBF78B941
+   75 0000039C BF09417F 
+              BD9565E4 
+              3ED1A8F0 
+              3F66F097         DCD              0xBF09417F, 0xBD9565E4, 0x3ED1A
+8F0, 0x3F66F097
+   76 000003AC 3FB2A1E0 
+              3FF0B367 
+              40163FA6 
+              403272B6         DCD              0x3FB2A1E0, 0x3FF0B367, 0x40163
+FA6, 0x403272B6
+   77 000003BC 404C6D14 
+              4063B67F 
+              4077E729 
+              4084551A         DCD              0x404C6D14, 0x4063B67F, 0x4077E
+729, 0x4084551A
+   78 000003CC 408ADFD7 
+              408F7EFA 
+              40922946 
+              4092E12B         DCD              0x408ADFD7, 0x408F7EFA, 0x40922
+946, 0x4092E12B
+   79 000003DC 4091B492 
+              408EBC5C 
+              408A1B97 
+              4083FE6E         DCD              0x4091B492, 0x408EBC5C, 0x408A1
+B97, 0x4083FE6E
+   80 000003EC 407931BA 
+              40684A6C 
+              4055C4F0 
+              4042251B         DCD              0x407931BA, 0x40684A6C, 0x4055C
+4F0, 0x4042251B
+   81 000003FC 402DF0F5 
+              4019AD0F 
+              4005D8E9 
+              3FE5D719         DCD              0x402DF0F5, 0x4019AD0F, 0x4005D
+8E9, 0x3FE5D719
+   82 0000040C 3FC2A0C7 
+              3FA2C8E9 
+              3F86E808 
+              3F5EE2F4         DCD              0x3FC2A0C7, 0x3FA2C8E9, 0x3F86E
+808, 0x3F5EE2F4
+   83 0000041C 3F396172 
+              3F1D8FEB 
+              3F0B5F9A 
+              3F027075         DCD              0x3F396172, 0x3F1D8FEB, 0x3F0B5
+F9A, 0x3F027075
+   84 0000042C 3F021560 
+              3F095A97 
+              3F170E1C 
+              3F29C9EF         DCD              0x3F021560, 0x3F095A97, 0x3F170
+E1C, 0x3F29C9EF
+
+
+
+ARM Macro Assembler    Page 7 
+
+
+   85 0000043C 3F3FFFBB 
+              3F5805AF 
+              3F70241E 
+              3F8351BE         DCD              0x3F3FFFBB, 0x3F5805AF, 0x3F702
+41E, 0x3F8351BE
+   86 0000044C 3F8CED2E 
+              3F941D87 
+              3F98302E 
+              3F988C98         DCD              0x3F8CED2E, 0x3F941D87, 0x3F983
+02E, 0x3F988C98
+   87 0000045C 3F94B956 
+              3F8C6044 
+              3F7EA355 
+              3F5B0C95         DCD              0x3F94B956, 0x3F8C6044, 0x3F7EA
+355, 0x3F5B0C95
+   88 0000046C 3F2E4078 
+              3EF1AA6C 
+              3E6EC008 
+              BD0004E9         DCD              0x3F2E4078, 0x3EF1AA6C, 0x3E6EC
+008, 0xBD0004E9
+   89 0000047C BEA19596 
+              BF1D05E2 
+              BF6ADA95 
+              BF9C2888         DCD              0xBEA19596, 0xBF1D05E2, 0xBF6AD
+A95, 0xBF9C2888
+   90 0000048C BFC1AF2A 
+              BFE4F944 
+              C00281E6 
+              C0106BF0         DCD              0xBFC1AF2A, 0xBFE4F944, 0xC0028
+1E6, 0xC0106BF0
+   91 0000049C C01BC8DB 
+              C0243399 
+              C02956E2 
+              C02AEFBE         DCD              0xC01BC8DB, 0xC0243399, 0xC0295
+6E2, 0xC02AEFBE
+   92 000004AC C028CF9B 
+              C022DDD3 
+              C01918A5 
+              C00B958F         DCD              0xC028CF9B, 0xC022DDD3, 0xC0191
+8A5, 0xC00B958F
+   93 000004BC BFF5021C 
+              BFCC3B72 
+              BF9D85A1 
+              BF5368DB         DCD              0xBFF5021C, 0xBFCC3B72, 0xBF9D8
+5A1, 0xBF5368DB
+   94 000004CC BEC6EF72 
+              3D955B6B 
+              3F0CBC60 
+              3F842ED8         DCD              0xBEC6EF72, 0x3D955B6B, 0x3F0CB
+C60, 0x3F842ED8
+   95 000004DC 3FC193D4 
+              3FFD5BC3 
+              401B2FA5 
+              4035C42B         DCD              0x3FC193D4, 0x3FFD5BC3, 0x401B2
+FA5, 0x4035C42B
+   96 000004EC 404DEC7D 
+              406338C2 
+              40754AF7 
+              4081EC8E         DCD              0x404DEC7D, 0x406338C2, 0x40754
+
+
+
+ARM Macro Assembler    Page 8 
+
+
+AF7, 0x4081EC8E
+   97 000004FC 4087576E 
+              408AD754 
+              408C691A 
+              408C1525         DCD              0x4087576E, 0x408AD754, 0x408C6
+91A, 0x408C1525
+   98 0000050C 408B0158 
+              40B4AFA6 
+              410126F0 
+              412025DF         DCD              0x408B0158, 0x40B4AFA6, 0x41012
+6F0, 0x412025DF
+   99 0000051C 412BD581 
+              41286319 
+              411C7DFD 
+              410B7648         DCD              0x412BD581, 0x41286319, 0x411C7
+DFD, 0x410B7648
+  100 0000052C 40ED64DC 
+              40BF9726 
+              4090D185 
+              40486801         DCD              0x40ED64DC, 0x40BF9726, 0x4090D
+185, 0x40486801
+  101 0000053C 3FF1B582 
+              3F5C27FD 
+              3DADA01E 
+              BED9D7AD         DCD              0x3FF1B582, 0x3F5C27FD, 0x3DADA
+01E, 0xBED9D7AD
+  102 0000054C BF2F546C 
+              BF3AE779 
+              BF1D6170 
+              BECE134A         DCD              0xBF2F546C, 0xBF3AE779, 0xBF1D6
+170, 0xBECE134A
+  103 0000055C BE22B8F7 
+              3D65E0F6 
+              3E483BC3 
+              3E6C0AA2         DCD              0xBE22B8F7, 0x3D65E0F6, 0x3E483
+BC3, 0x3E6C0AA2
+  104 0000056C 3E1D6B0E 
+              BCA19F04 
+              BE821E17 
+              BEFE913B         DCD              0x3E1D6B0E, 0xBCA19F04, 0xBE821
+E17, 0xBEFE913B
+  105 0000057C BF2FA621 
+              BF414752 
+              BF248873 
+              BE99F4EE         DCD              0xBF2FA621, 0xBF414752, 0xBF248
+873, 0xBE99F4EE
+  106 0000058C 3E99D601 
+              3F95461E 
+              4011A0F9 
+              40652A66         DCD              0x3E99D601, 0x3F95461E, 0x4011A
+0F9, 0x40652A66
+  107 0000059C 40A05901 
+              40CF3E8E 
+              40FC0D28 
+              4111BB80         DCD              0x40A05901, 0x40CF3E8E, 0x40FC0
+D28, 0x4111BB80
+  108 000005AC 412131E6 
+              412B1C53 
+              412E8B25 
+
+
+
+ARM Macro Assembler    Page 9 
+
+
+              412B03D8         DCD              0x412131E6, 0x412B1C53, 0x412E8
+B25, 0x412B03D8
+  109 000005BC 41208E32 
+              410FB603 
+              40F30256 
+              40BEB59D         DCD              0x41208E32, 0x410FB603, 0x40F30
+256, 0x40BEB59D
+  110 000005CC 4085EB3E 
+              40189FAF 
+              3F2C4DA6 
+              BF589A94         DCD              0x4085EB3E, 0x40189FAF, 0x3F2C4
+DA6, 0xBF589A94
+  111 000005DC C0059301 
+              C03F4C70 
+              C061474A 
+              C06B6866         DCD              0xC0059301, 0xC03F4C70, 0xC0614
+74A, 0xC06B6866
+  112 000005EC C05F6E3B 
+              C040AF41 
+              C013B4C1 
+              BFBB78EC         DCD              0xC05F6E3B, 0xC040AF41, 0xC013B
+4C1, 0xBFBB78EC
+  113 000005FC BF10B7DA 
+              3E9F72EA 
+              3F8CD2A0 
+              3FE097A8         DCD              0xBF10B7DA, 0x3E9F72EA, 0x3F8CD
+2A0, 0x3FE097A8
+  114 0000060C 401011FF 
+              4025BCB4 
+              4032B8D9 
+              40399F53         DCD              0x401011FF, 0x4025BCB4, 0x4032B
+8D9, 0x40399F53
+  115 0000061C 403DD4F6 
+              404314C3 
+              404CF124 
+              405E5992         DCD              0x403DD4F6, 0x404314C3, 0x404CF
+124, 0x405E5992
+  116 0000062C 407931BA 
+              408F02B5 
+              40A5F0D5 
+              40C02BC5         DCD              0x407931BA, 0x408F02B5, 0x40A5F
+0D5, 0x40C02BC5
+  117 0000063C 40DBD48F 
+              40F68E57 
+              4106DB8C 
+              410F550D         DCD              0x40DBD48F, 0x40F68E57, 0x4106D
+B8C, 0x410F550D
+  118 0000064C 411382B9 
+              411275E5 
+              410B9DCD 
+              40FDB63B         DCD              0x411382B9, 0x411275E5, 0x410B9
+DCD, 0x40FDB63B
+  119 0000065C 40D912A5 
+              40AAF995 
+              406BD617 
+              3FF43D50         DCD              0x40D912A5, 0x40AAF995, 0x406BD
+617, 0x3FF43D50
+  120 0000066C 3DFDE950 
+              BFC6AF53 
+
+
+
+ARM Macro Assembler    Page 10 
+
+
+              C040B38C 
+              C0850A1D         DCD              0x3DFDE950, 0xBFC6AF53, 0xC040B
+38C, 0xC0850A1D
+  121 0000067C C09D6E31 
+              C0A820A6 
+              C0A4C0BA 
+              C093F67D         DCD              0xC09D6E31, 0xC0A820A6, 0xC0A4C
+0BA, 0xC093F67D
+  122 0000068C C06EBF56 
+              C022CE75 
+              BF942DEA 
+              3EA678F8         DCD              0xC06EBF56, 0xC022CE75, 0xBF942
+DEA, 0x3EA678F8
+  123 0000069C 3FE68B83 
+              404B3A63 
+              408BD2D3 
+              40AA76CB         DCD              0x3FE68B83, 0x404B3A63, 0x408BD
+2D3, 0x40AA76CB
+  124 000006AC 40C090CA 
+              40CE0581 
+              40D388FF 
+              40D27CF5         DCD              0x40C090CA, 0x40CE0581, 0x40D38
+8FF, 0x40D27CF5
+  125 000006BC 40CCBEB3 
+              40C46A34 
+              40BB98C6 
+              40B421FA         DCD              0x40CCBEB3, 0x40C46A34, 0x40BB9
+8C6, 0x40B421FA
+  126 000006CC 40AF6583 
+              40AE2385 
+              40B06765 
+              40B5874D         DCD              0x40AF6583, 0x40AE2385, 0x40B06
+765, 0x40B5874D
+  127 000006DC 40BC385E 
+              40C2B584 
+              40C6F4DD 
+              40C6E62F         DCD              0x40BC385E, 0x40C2B584, 0x40C6F
+4DD, 0x40C6E62F
+  128 000006EC 40C0B3EC 
+              40B2FFFE 
+              409D15D9 
+              407E18F9         DCD              0x40C0B3EC, 0x40B2FFFE, 0x409D1
+5D9, 0x407E18F9
+  129 000006FC 4033A8F0 
+              3FBCC099 
+              3D4B263A 
+              BFAFF976         DCD              0x4033A8F0, 0x3FBCC099, 0x3D4B2
+63A, 0xBFAFF976
+  130 0000070C C02C9CDA 
+              C0743BD7 
+              C0947E94 
+              C0A3150F         DCD              0xC02C9CDA, 0xC0743BD7, 0xC0947
+E94, 0xC0A3150F
+  131 0000071C C0A45283 
+              C0979CD8 
+              C07AC357 
+              C02E240D         DCD              0xC0A45283, 0xC0979CD8, 0xC07AC
+357, 0xC02E240D
+  132 0000072C BF9C1BEA 
+
+
+
+ARM Macro Assembler    Page 11 
+
+
+              3EFAE5A9 
+              40130A22 
+              4082C707         DCD              0xBF9C1BEA, 0x3EFAE5A9, 0x40130
+A22, 0x4082C707
+  133 0000073C 40B7DEDF 
+              40E5A232 
+              4104C895 
+              411102DE         DCD              0x40B7DEDF, 0x40E5A232, 0x4104C
+895, 0x411102DE
+  134 0000074C 4117272C 
+              411758F3 
+              41122E87 
+              41089D88         DCD              0x4117272C, 0x411758F3, 0x41122
+E87, 0x41089D88
+  135 0000075C 40F7BE2F 
+              40DA9D9D 
+              40BC8F51 
+              40A004E0         DCD              0x40F7BE2F, 0x40DA9D9D, 0x40BC8
+F51, 0x40A004E0
+  136 0000076C 4086F1F0 
+              40654374 
+              40473F58 
+              40336A4D         DCD              0x4086F1F0, 0x40654374, 0x40473
+F58, 0x40336A4D
+  137 0000077C 4027F868 
+              402209EE 
+              401E1367 
+              40185791         DCD              0x4027F868, 0x402209EE, 0x401E1
+367, 0x40185791
+  138 0000078C C0A02AD7 
+              C13380AD 
+              C1123871 
+              C07F0315         DCD              0xC0A02AD7, 0xC13380AD, 0xC1123
+871, 0xC07F0315
+  139 0000079C BF52D62D        DCD              0xBF52D62D
+  140 000007A0         
+  141 000007A0                 END
+              00000000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\term_project.d -o.\objects\term_project.o -IC:\Keil_v5\ARM\R
+V31\INC -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine=
+"__UVISION_VERSION SETA 529" --list=.\listings\term_project.lst Term_project.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Done 00000004
+
+Symbol: Done
+   Definitions
+      At line 11 in file Term_project.s
+   Uses
+      None
+Comment: Done unused
+Main 00000000
+
+Symbol: Main
+   Definitions
+      At line 4 in file Term_project.s
+   Uses
+      None
+Comment: Main unused
+Result 00000004
+
+Symbol: Result
+   Definitions
+      At line 9 in file Term_project.s
+   Uses
+      None
+Comment: Result unused
+Sampled_Data 0000000C
+
+Symbol: Sampled_Data
+   Definitions
+      At line 17 in file Term_project.s
+   Uses
+      At line 5 in file Term_project.s
+Comment: Sampled_Data used once
+Save_Result_Address 00000008
+
+Symbol: Save_Result_Address
+   Definitions
+      At line 14 in file Term_project.s
+   Uses
+      None
+Comment: Save_Result_Address unused
+project 00000000
+
+Symbol: project
+   Definitions
+      At line 1 in file Term_project.s
+   Uses
+      None
+Comment: project unused
+6 symbols
+340 symbols in table

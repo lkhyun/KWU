@@ -1,0 +1,94 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ARMex,CODE,READONLY
+    2 00000000                 ENTRY
+    3 00000000         start
+    4 00000000 E28F0018        ADR              r0, String
+    5 00000004 E59F1020        LDR              r1, tempaddr ;load address
+    6 00000008         
+    7 00000008         Loop
+    8 00000008 E4D02001        LDRB             r2,[r0],#1  ;load data with bin
+                                                            ary type and r0 + 1
+                                                            
+    9 0000000C E3520000        CMP              r2,#0
+   10 00000010 0A000001        BEQ              Endline     ; move endline
+   11 00000014 E4C12001        STRB             r2,[r1],#1  ;store r2 to r1 and
+                                                             r1 + 1
+   12 00000018 1AFFFFFA        BNE              Loop        ;move loop
+   13 0000001C         
+   14 0000001C         Endline
+   15 0000001C E1A0F00E        MOV              pc,lr
+   16 00000020         
+   17 00000020 61 70 70 
+              6C 65 20 
+              74 72 65 
+              65 00    String  DCB              "apple tree",0
+   18 0000002B 00 00040000 
+                       tempaddr
+                               DCD              &40000
+   19 00000030                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\problem.d -o.\objects\problem.o -IC:\Users\dlrkd\homework\ka
+nghyun\onedrive\2-2\keli\ARM\RV31\INC -IC:\Users\dlrkd\homework\kanghyun\onedri
+ve\2-2\keli\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISIO
+N_VERSION SETA 529" --list=.\listings\problem.lst problem.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARMex 00000000
+
+Symbol: ARMex
+   Definitions
+      At line 1 in file problem.s
+   Uses
+      None
+Comment: ARMex unused
+Endline 0000001C
+
+Symbol: Endline
+   Definitions
+      At line 14 in file problem.s
+   Uses
+      At line 10 in file problem.s
+Comment: Endline used once
+Loop 00000008
+
+Symbol: Loop
+   Definitions
+      At line 7 in file problem.s
+   Uses
+      At line 12 in file problem.s
+Comment: Loop used once
+String 00000020
+
+Symbol: String
+   Definitions
+      At line 17 in file problem.s
+   Uses
+      At line 4 in file problem.s
+Comment: String used once
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 3 in file problem.s
+   Uses
+      None
+Comment: start unused
+tempaddr 0000002C
+
+Symbol: tempaddr
+   Definitions
+      At line 18 in file problem.s
+   Uses
+      At line 5 in file problem.s
+Comment: tempaddr used once
+6 symbols
+338 symbols in table

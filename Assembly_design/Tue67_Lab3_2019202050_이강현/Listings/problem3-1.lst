@@ -1,0 +1,86 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ARMex, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         start
+    4 00000000 E59F0038        LDR              r0,addr
+    5 00000004 E3A01001        MOV              r1,#1       ;r1 = 1
+    6 00000008 E1A02081        MOV              r2,r1,LSL #1 ;r2 = 2
+    7 0000000C E1A02082        MOV              r2,r2,LSL #1 ;r2 = 4
+    8 00000010 E2822001        ADD              r2,r2,#1    ;r2 = 5
+    9 00000014 E0812082        ADD              r2,r1,r2,LSL #1 ;r2 = 11
+   10 00000018 E2811001        ADD              r1,r1,#1    ; r1 = 2
+   11 0000001C E1A04002        MOV              r4,r2       ; r4 = sum
+   12 00000020         
+   13 00000020         loop
+   14 00000020 E0823001        ADD              r3,r2,r1
+   15 00000024 E0844003        ADD              r4,r4,r3
+   16 00000028 E2811002        ADD              r1,r1,#2
+   17 0000002C E353001D        CMP              r3,#29      ; find last number
+   18 00000030 0A000000        BEQ              endloop
+   19 00000034 EAFFFFF9        B                loop
+   20 00000038         endloop
+   21 00000038 E5804000        STR              r4,[r0]
+   22 0000003C E1A0F00E        MOV              pc,lr
+   23 00000040         
+   24 00000040 00004000 
+                       addr    &                &4000
+   25 00000044         
+   26 00000044                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\problem3-1.d -o.\objects\problem3-1.o -IC:\Users\dlrkd\homew
+ork\kanghyun\onedrive\2-2\keli\ARM\RV31\INC -IC:\Users\dlrkd\homework\kanghyun\
+onedrive\2-2\keli\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__
+UVISION_VERSION SETA 529" --list=.\listings\problem3-1.lst problem3-1.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARMex 00000000
+
+Symbol: ARMex
+   Definitions
+      At line 1 in file problem3-1.s
+   Uses
+      None
+Comment: ARMex unused
+addr 00000040
+
+Symbol: addr
+   Definitions
+      At line 24 in file problem3-1.s
+   Uses
+      At line 4 in file problem3-1.s
+Comment: addr used once
+endloop 00000038
+
+Symbol: endloop
+   Definitions
+      At line 20 in file problem3-1.s
+   Uses
+      At line 18 in file problem3-1.s
+Comment: endloop used once
+loop 00000020
+
+Symbol: loop
+   Definitions
+      At line 13 in file problem3-1.s
+   Uses
+      At line 19 in file problem3-1.s
+Comment: loop used once
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 3 in file problem3-1.s
+   Uses
+      None
+Comment: start unused
+5 symbols
+337 symbols in table
