@@ -1,1 +1,4 @@
-# data_architecture_design2
+data_architecture_design2
+==========================
+FP-Growth와 B+ Tree를 이용하여 상품 추천 프로그램을 구현
+--------------------------------------------------------
