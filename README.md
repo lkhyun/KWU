@@ -5,5 +5,5 @@
 -testbench를 기반으로 총 13가지의 ALU 연산 기능을 test
 ![image](https://github.com/user-attachments/assets/0d89a431-60fe-472f-9844-d4ab8fb03dec)
 
-------------------------------
 자세한 내용은 내부 제안서 참조
+------------------------------
