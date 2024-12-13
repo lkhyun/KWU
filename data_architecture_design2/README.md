@@ -7,4 +7,6 @@ FP-Growth와 B+ Tree를 이용하여 상품 추천 프로그램을 구현
 
 ![image](https://github.com/user-attachments/assets/69b26080-0aca-4b75-a3c7-f1965d6c6727)
 
-#자세한 내용은 내부 파일 참고
+
+자세한 내용은 내부 파일 참고
+---------------------------
