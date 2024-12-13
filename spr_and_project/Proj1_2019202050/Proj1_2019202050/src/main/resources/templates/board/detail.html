@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title th:text="@{'게시판 - ' + ${post.title}}"></title>
+    <style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .item img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .item h3, .item p {
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+<div>
+    <a href="/">
+        <strong>게시판</strong>
+    </a>
+</div>
+<div class="container">
+    <div class="item">
+        <img th:src="@{../} + ${post.origFilename}" alt="Image 1"/>
+        <h3 th:text="@{${post.title}}"></h3>
+        <p  th:text="${post.content}"></p>
+    </div>
+    <a th:href="@{'/post/edit/' + ${post.id}}" role="button">수정</a>
+    <form id="delete-form" th:action="@{'/post/' + ${post.id}}" method="post">
+        <input type="hidden" name="_method" value="delete" />
+        <button id="delete-btn" type="submit">삭제</button>
+    </form>
+</div>
+</body>
+</html>
