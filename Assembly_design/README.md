@@ -9,4 +9,4 @@ Assembly_design
 
 ![image](https://github.com/user-attachments/assets/36a9d194-9ccd-44c0-bef9-4b9de6bcd81c)
 
-# 자세한 내용은 보고서에 명시
+- 자세한 내용은 보고서에 명시
