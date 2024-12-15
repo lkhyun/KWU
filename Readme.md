@@ -2,7 +2,7 @@
 ====================================
 1-1
 ----
-  -C_programming
+  -[C_programming](https://github.com/lkhyun/KWU/tree/main/C_programming)
   
 1-2
 ----
