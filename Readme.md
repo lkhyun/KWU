@@ -49,6 +49,3 @@
 4-2
 -----
   -[AI_programming](https://github.com/lkhyun/KWU/tree/main/AI_programming)
-
-graduation_work
------
